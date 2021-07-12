@@ -145,7 +145,7 @@ Uma integração entre as plataformas Pipedrive e Bling( A integração deve bus
     "person_hidden": false}]
 
 
-## Integra os negocios/oportunidades no Bling e salva no banco de dados(mongo)
+## Integrando os negocios/oportunidades no Bling e salva no banco de dados(mongo)
 
 ### Request
 
