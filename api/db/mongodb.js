@@ -1,10 +1,15 @@
-const mongoose = require('mongoose')
-require('dotenv').config({ path: '../../.env' })
+/* eslint-disable no-console */
+const mongoose = require('mongoose');
+require('dotenv').config({ path: '../../.env' });
 
 mongoose.connect(`${process.env.MONGO_db}`, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true,
+}).then(() => {
+  console.log('Conectado ao servidor do Mongo');
 })
-const db = mongoose.connection
-module.exports = db
+  .catch((err) => console.log('Erro ao conectar no servidor Mongo', err));
+const db = mongoose.connection;
+module.exports = db;
